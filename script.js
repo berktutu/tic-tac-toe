@@ -41,6 +41,11 @@ function checkWin() {
       gameRunning = false;
     }
   });
+
+  if (gameRunning && !board.includes("")) {
+    gameStatus.textContent = "It's a tie";
+    gameRunning = false;
+  }
 }
 
 // Event handlers
